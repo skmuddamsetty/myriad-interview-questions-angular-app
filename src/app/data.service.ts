@@ -65,11 +65,13 @@ export class DataService {
   }
 
   getCurrentQandA(): Observable<QandA> {
-    this.currentQandA.next(this.questionsArray[this.currentQandANo]);
+    if (this.currentQandANo >= 0) {
+      this.currentQandA.next(this.questionsArray[this.currentQandANo]);
+    }
     return this.currentQandA.asObservable();
   }
 
-  loadQuestionsFromDB(topic: string): Observable<QandA> {
+  loadQuestionsFromDB(topic: string) {
     switch (topic) {
       case AppConstants.ANGULAR:
         this.questionsArray = [
@@ -82,8 +84,6 @@ export class DataService {
             answer: 'Second Answer'
           }
         ];
-        this.currentQandANo = 0;
-        this.currentQandA.next(this.questionsArray[this.currentQandANo]);
         break;
       case AppConstants.REACT:
         this.questionsArray = [
@@ -96,12 +96,11 @@ export class DataService {
             answer: 'Second Answer'
           }
         ];
-        this.currentQandANo = 0;
-        this.currentQandA.next(this.questionsArray[this.currentQandANo]);
         break;
       default:
         break;
     }
-    return this.currentQandA.asObservable();
+    this.currentQandANo = 0;
+    this.currentQandA.next(this.questionsArray[this.currentQandANo]);
   }
 }

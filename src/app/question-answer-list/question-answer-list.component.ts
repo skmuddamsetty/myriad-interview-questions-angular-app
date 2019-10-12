@@ -31,10 +31,7 @@ export class QuestionAnswerListComponent implements OnInit, OnDestroy {
     );
     this.subscriptions.push(
       this.route.params.subscribe(params => {
-        this.dataService.loadQuestionsFromDB(params['topic']).subscribe(res => {
-          console.log(res);
-          this.currentQandA = res;
-        });
+        this.dataService.loadQuestionsFromDB(params['topic']);
       })
     );
     // this.items = this.db
