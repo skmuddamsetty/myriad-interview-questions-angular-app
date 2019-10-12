@@ -1,0 +1,16 @@
+<div class="question-and-answer__wrapper">
+  <a href="#prev-question" (click)="onPrevQuestion($event)">
+    <img src="/assets/img/angel-left-thin.svg" alt="" />
+  </a>
+
+  <div class="question-and-answer__box">
+    <app-question
+      [question]="currentQandA && currentQandA.question"
+    ></app-question>
+    <app-answer [answer]="currentQandA && currentQandA.answer"></app-answer>
+  </div>
+
+  <a href="#next-question" (click)="onNextQuestion($event)">
+    <img src="/assets/img/angel-right-thin.svg" alt="" />
+  </a>
+</div>

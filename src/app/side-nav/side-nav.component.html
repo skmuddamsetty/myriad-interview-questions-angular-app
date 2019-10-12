@@ -1,0 +1,27 @@
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
+  <a
+    [routerLink]="['/']"
+    routerLinkActive="router-link-active"
+    (click)="closeNav()"
+    ><span class="sidenav__text">Home</span></a
+  >
+  <a
+    [routerLink]="['/questions-and-answers']"
+    routerLinkActive="router-link-active"
+    (click)="closeNav()"
+    ><span class="sidenav__text">Angular</span></a
+  >
+  <a
+    [routerLink]="['/questions-and-answers']"
+    (click)="closeNav()"
+    routerLinkActive="router-link-active"
+    >React</a
+  >
+</div>
+<span
+  class="sidenav__menu"
+  style="font-size:30px;cursor:pointer"
+  (click)="openNav()"
+  >&#9776; Menu</span
+>

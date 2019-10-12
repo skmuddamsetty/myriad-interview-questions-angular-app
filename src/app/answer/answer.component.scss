@@ -1,0 +1,13 @@
+@import '../../mixins/screen-size-mixin';
+
+.answer {
+  background: white;
+  font-size: 1.5rem;
+  padding: 1rem;
+  text-align: left;
+  max-height: 50vh;
+  overflow: scroll;
+  @include md {
+    padding: 1rem 3rem;
+  }
+}

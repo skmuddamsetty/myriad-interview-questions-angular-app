@@ -1,0 +1,71 @@
+@import '../../mixins/screen-size-mixin';
+
+.question-and-answer {
+  &__list {
+    max-width: 96rem;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    position: absolute;
+    padding: 0 15px;
+    top: 50%;
+    left: 50%;
+    // @include sm {
+    //   min-height: 100%;
+    // }
+  }
+  &__container {
+    min-width: 90vw;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+
+    &:not(:last-child) {
+      margin-bottom: 0.5rem;
+    }
+    &:hover {
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    }
+    @include md {
+      min-width: 96rem;
+    }
+  }
+
+  &__wrapper {
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 1rem;
+    min-width: 90vw;
+
+    @include md {
+      padding: 4rem;
+    }
+    @include lg {
+      min-width: 96rem;
+    }
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 96rem;
+    margin: 0 auto;
+    background: white;
+
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    &:hover {
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  img {
+    flex: 0 0 3%;
+    cursor: pointer;
+  }
+
+  &__box {
+    flex: 0 0 94%;
+  }
+
+  .icon-arrow {
+    background: #fafafa;
+  }
+}

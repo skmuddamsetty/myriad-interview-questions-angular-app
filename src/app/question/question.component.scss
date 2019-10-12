@@ -1,0 +1,14 @@
+.question__container {
+  background: white;
+  font-family: var(--headlinesFont);
+  font-weight: 600;
+  font-size: 2rem;
+  padding-top: 1rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  text-align: left;
+  &-text {
+    border-bottom: 1px solid #d8d8d8;
+    padding-bottom: 1rem;
+  }
+}

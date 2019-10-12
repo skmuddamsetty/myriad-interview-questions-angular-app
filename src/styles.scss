@@ -1,0 +1,43 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+  --headlinesFont: 'Josefin Sans', sans-serif;
+  --bodyFont: 'Work Sans', sans-serif;
+  --wildWatermelon: #ff4f87;
+  --fuelYellow: #f0a035;
+  --textColor: #323232;
+  --bodyBg: #d6d6d6;
+  --white: #fff;
+  --black: #000;
+}
+
+body {
+  font-family: var(--bodyFont);
+  color: var(--textColor);
+  line-height: 1.6;
+  padding: 1rem;
+  background-color: #f6f6f6;
+  background-image: linear-gradient(315deg, #f6f6f6 0%, #e9e9e9 74%);
+  min-height: 100vh;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; // 1rem = 10px, 10px/16px = 62.5%
+}
+
+p {
+  &:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+}
